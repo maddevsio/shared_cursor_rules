@@ -1,0 +1,192 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Design Patterns Guidelines
+
+## Core Principles
+
+### Pattern Selection
+- Choose patterns based on specific problems, not for their own sake
+- Understand the problem domain before applying patterns
+- Consider the tradeoffs of each pattern
+- Use patterns as a common vocabulary for design solutions
+
+### Pattern Implementation
+- Adapt patterns to your specific context
+- Combine patterns when appropriate
+- Document pattern usage in your codebase
+- Don't force patterns where they don't fit
+
+### Pattern Evolution
+- Refactor toward patterns as complexity grows
+- Start with simpler solutions when appropriate
+- Recognize when patterns are emerging naturally
+- Evolve patterns as requirements change
+
+## Creational Patterns
+
+### Factory Method
+- Use when a class can't anticipate the objects it creates
+- Encapsulate object creation logic
+- Allow subclasses to alter the type of objects created
+- Decouple client code from concrete classes
+
+### Abstract Factory
+- Use to create families of related objects
+- Ensure created objects work together correctly
+- Isolate concrete classes from client code
+- Support changing entire product families
+
+### Builder
+- Use for complex object construction with many parameters
+- Separate construction from representation
+- Create different representations using the same process
+- Improve readability of code with many constructor parameters
+
+### Singleton
+- Use sparingly, only when exactly one instance is needed
+- Make thread-safe if necessary
+- Consider alternatives like dependency injection
+- Be aware of potential testing difficulties
+
+### Prototype
+- Use when creating objects is more efficient by copying
+- Create new objects by cloning prototypes
+- Reduce subclassing by copying prototype objects
+- Support cloning complex structures
+
+## Structural Patterns
+
+### Adapter
+- Convert interfaces to make incompatible classes work together
+- Use for integrating with legacy code or third-party libraries
+- Implement with inheritance or composition
+- Ensure error handling is maintained across the adaptation
+
+### Bridge
+- Separate abstraction from implementation
+- Allow both to vary independently
+- Use when both interface and implementation might change
+- Avoid exponential class hierarchy growth
+
+### Composite
+- Treat individual objects and compositions uniformly
+- Create tree structures that represent part-whole hierarchies
+- Let clients ignore differences between compositions and individual objects
+- Define class hierarchies consisting of primitive and complex objects
+
+### Decorator
+- Add responsibilities to objects dynamically
+- Provide flexible alternative to subclassing
+- Extend functionality without modifying the original code
+- Compose behavior instead of inheriting it
+
+### Facade
+- Provide a simplified interface to a complex subsystem
+- Reduce dependencies between clients and subsystems
+- Don't hide the subsystem entirely for advanced users
+- Encapsulate poorly designed APIs with better interfaces
+
+### Proxy
+- Control access to another object
+- Use for lazy loading, caching, access control, logging, etc.
+- Implement same interface as the real subject
+- Defer operations or add functionality without changing the real subject
+
+## Behavioral Patterns
+
+### Chain of Responsibility
+- Process requests through a chain of handlers
+- Let each handler decide whether to process or pass to the next
+- Decouple senders and receivers
+- Distribute responsibilities among multiple objects
+
+### Command
+- Encapsulate requests as objects
+- Parameterize clients with different requests
+- Queue or log requests
+- Support undoable operations
+
+### Observer
+- Implement one-to-many dependency between objects
+- Notify dependents when object state changes
+- Loose coupling between subject and observers
+- Support broadcast communication
+
+### Strategy
+- Define a family of interchangeable algorithms
+- Encapsulate each algorithm
+- Make algorithms interchangeable at runtime
+- Separate algorithm implementation from clients that use it
+
+### Template Method
+- Define skeleton of an algorithm, deferring steps to subclasses
+- Reuse algorithm structure while allowing subclasses to override steps
+- Define hooks for optional steps
+- Avoid code duplication in related algorithms
+
+### Mediator
+- Reduce dependencies between objects by centralizing communication
+- Promote loose coupling by keeping objects from referring explicitly to each other
+- Encapsulate how objects interact
+- Simplify maintenance by centralizing complex interactions
+
+## Architectural Patterns
+
+### Model-View-Controller (MVC)
+- Separate data (Model) from user interface (View) and input logic (Controller)
+- Allow independent development, testing and maintenance
+- Support multiple views of the same data
+- Promote separation of concerns
+
+### Model-View-ViewModel (MVVM)
+- Separate UI (View) from presentation logic (ViewModel) and business logic (Model)
+- Use data binding to connect View and ViewModel
+- Make views more testable and maintainable
+- Support reactive UI updates
+
+### Repository
+- Separate data access logic from business logic
+- Abstract data storage details
+- Provide collection-like interface for accessing domain objects
+- Centralize data access logic and policies
+
+### Dependency Injection
+- Invert control of dependencies
+- Inject dependencies instead of creating them internally
+- Improve testability and flexibility
+- Reduce hard-coded dependencies
+
+### Microservices
+- Build applications as suites of independently deployable services
+- Organize around business capabilities
+- Use lightweight communication mechanisms
+- Allow independent scaling and technology choices
+
+## Domain-Driven Design
+
+### Bounded Context
+- Define explicit boundaries around domain models
+- Keep models consistent within bounds
+- Define relationships between bounded contexts
+- Separate models that serve different purposes
+
+### Entities and Value Objects
+- Distinguish objects with identity from value objects
+- Implement value objects as immutable
+- Use entities for objects that require unique identity
+- Design value objects for concepts measured by their attributes
+
+### Aggregates and Repositories
+- Define consistency boundaries with aggregates
+- Access aggregates through a single root entity
+- Design repositories around aggregate roots
+- Maintain invariants within aggregates
+
+### Domain Events
+- Model significant occurrences in the domain as events
+- Use events to communicate between bounded contexts
+- Implement event-sourcing for event-driven architectures
+- Capture historical changes through events

@@ -1,0 +1,107 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Code Review Guidelines
+
+## Core Principles
+
+### Purpose of Code Reviews
+- Improve code quality and catch bugs early
+- Share knowledge across the team
+- Ensure consistency in code style and patterns
+- Validate implementation against requirements
+
+### Review Mindset
+- Focus on the code, not the person
+- Approach reviews with empathy and respect
+- Be constructive, not critical
+- View reviews as collaborative learning opportunities
+
+## Reviewer Responsibilities
+
+### What to Look For
+- Correctness: Does the code work as intended?
+- Maintainability: Is the code easy to understand and modify?
+- Edge cases: Are failure scenarios handled?
+- Security: Are there potential vulnerabilities?
+- Performance: Are there inefficient algorithms or operations?
+- Tests: Is the code adequately tested?
+
+### How to Give Feedback
+- Be specific and actionable in your comments
+- Explain the why, not just the what
+- Suggest alternatives rather than just pointing out problems
+- Differentiate between required changes and suggestions
+- Acknowledge good code and practices
+
+### Review Thoroughness
+- Take time to properly understand the code
+- Run the code if possible
+- Review tests alongside implementation
+- Check for consistency with existing codebase
+
+## Author Responsibilities
+
+### Preparing Code for Review
+- Keep changes small and focused
+- Provide context in the pull request description
+- Reference related issues or requirements
+- Self-review before requesting others to review
+- Address all automated linting/test failures
+
+### Responding to Feedback
+- Consider all feedback objectively
+- Explain your reasoning when disagreeing
+- Ask for clarification when needed
+- Make requested changes promptly
+- Thank reviewers for their time and input
+
+## Review Process
+
+### Before the Review
+- Ensure CI checks pass
+- Make sure the branch is up-to-date
+- Include relevant documentation
+- Verify tests cover the changes
+
+### During the Review
+- Focus on one review at a time
+- Break large reviews into logical chunks
+- Use inline comments for specific issues
+- Use summary comments for broader feedback
+
+### After the Review
+- Follow up on addressed comments
+- Schedule discussions for complex disagreements
+- Approve once all required changes are made
+- Update documentation if necessary
+
+## Review Etiquette
+
+### Communication Style
+- Use "we" instead of "you" when discussing code
+- Phrase feedback as questions when appropriate
+- Avoid absolutes like "always" and "never"
+- Keep discussions technical and objective
+
+### Timeliness
+- Prioritize reviews to prevent blocking teammates
+- Aim to review code within one business day
+- Communicate expected delays
+- Consider time zone differences for distributed teams
+
+## Special Reviews
+
+### Security-Sensitive Code
+- Extra scrutiny for authentication and authorization
+- Verify input validation and output encoding
+- Check for exposure of sensitive information
+- Consider involving security specialists
+
+### Performance-Critical Sections
+- Validate algorithmic complexity
+- Review for unnecessary computations or memory usage
+- Consider load and scale factors
+- Verify with benchmarks when appropriate

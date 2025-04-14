@@ -1,0 +1,90 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Error Handling Guidelines
+
+## Core Principles
+
+### Fail Fast and Explicitly
+- Detect errors at their source rather than allowing them to propagate
+- Make failure conditions explicit and visible
+- Return early when validation fails
+
+### Error Messages
+- Error messages should be clear, specific, and actionable
+- Include relevant context (what operation was being performed)
+- Avoid exposing sensitive information in error messages
+- Consider internationalization needs for user-facing errors
+
+### Use Appropriate Error Mechanisms
+- Distinguish between expected and unexpected errors
+- Use language-specific error handling mechanisms appropriately
+- In typed languages, prefer typed/structured errors over strings
+
+## Exception Handling
+
+### When to Use Exceptions
+- Use exceptions for exceptional conditions, not for control flow
+- Don't use exceptions for expected situations (e.g., validation failures)
+- Reserve exceptions for truly unexpected conditions
+
+### Exception Handling Practices
+- Catch specific exceptions, not broad exception types
+- Handle exceptions at the appropriate level of abstraction
+- Don't catch exceptions you can't properly handle
+- Never swallow exceptions without logging or handling
+
+### Try-Catch Blocks
+- Keep try blocks as small as possible
+- Don't mix business logic with error handling logic
+- Ensure resources are properly released in finally blocks or equivalent
+
+## Error Recovery
+
+### Graceful Degradation
+- Design systems to partially function when components fail
+- Implement fallback mechanisms for critical operations
+- Consider circuit breakers for external dependencies
+
+### Retry Mechanisms
+- Implement exponential backoff for retrying operations
+- Set appropriate timeout and retry limits
+- Only retry operations that are idempotent or can be safely repeated
+
+## Error Logging
+
+### What to Log
+- Log the complete error context (stack trace, inputs, state)
+- Include correlation IDs for tracing requests through the system
+- Log at appropriate severity levels (error vs warning vs info)
+
+### Structured Logging
+- Use structured logging formats (JSON, etc.)
+- Include machine-readable error codes
+- Log in a format that can be easily queried and analyzed
+
+## Error Prevention
+
+### Defensive Programming
+- Validate all inputs at system boundaries
+- Check preconditions before performing operations
+- Use assertions for invariants and impossible conditions
+
+### Null Safety
+- Use language features to prevent null reference errors
+- Consider using the Null Object pattern where appropriate
+- Be explicit about nullability in APIs
+
+## User Experience
+
+### User-Facing Errors
+- Provide friendly error messages for end users
+- Offer suggestions for how to resolve the issue
+- Include support information for unresolvable errors
+
+### API Error Responses
+- Return appropriate HTTP status codes for API errors
+- Include machine-readable error codes and human-readable messages
+- Document error responses as part of API documentation

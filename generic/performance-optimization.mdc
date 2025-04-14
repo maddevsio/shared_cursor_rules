@@ -1,0 +1,183 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Performance Optimization Guidelines
+
+## Measurement First
+
+### Establish Baselines
+- Measure before optimizing
+- Establish clear performance metrics
+- Define performance targets and SLAs
+- Create reproducible performance tests
+
+### Identify Bottlenecks
+- Use profiling tools to find hot spots
+- Analyze performance metrics
+- Focus on the critical path
+- Look for the biggest gains first
+
+### Continuous Measurement
+- Monitor performance in production
+- Track performance over time
+- Set up alerts for regressions
+- Measure impact of optimizations
+
+## Algorithm Efficiency
+
+### Time Complexity
+- Understand the Big O complexity of algorithms
+- Choose appropriate data structures
+- Reduce unnecessary traversals or iterations
+- Optimize inner loops first
+
+### Space Complexity
+- Minimize memory usage
+- Be aware of memory allocations
+- Consider cache efficiency
+- Balance time and space tradeoffs
+
+### Common Optimizations
+- Use memoization for repeated calculations
+- Implement lazy loading and evaluation
+- Consider dynamic programming approaches
+- Use appropriate search algorithms (binary search, etc.)
+
+## Data Access Optimization
+
+### Database Optimization
+- Index frequently queried columns
+- Optimize query structure
+- Use appropriate join types
+- Minimize the data returned
+- Consider denormalization where appropriate
+
+### Caching Strategies
+- Cache frequently accessed data
+- Implement multi-level caching
+- Use appropriate cache invalidation
+- Consider cache hit ratio
+- Select the right caching technology
+
+### I/O Optimization
+- Batch read/write operations
+- Use buffered I/O
+- Consider memory-mapped files
+- Optimize network requests
+- Implement connection pooling
+
+## Front-End Performance
+
+### Asset Optimization
+- Minify and compress static assets
+- Use appropriate image formats and sizes
+- Implement lazy loading of assets
+- Bundle and optimize JavaScript and CSS
+- Reduce unnecessary dependencies
+
+### Rendering Performance
+- Minimize DOM manipulations
+- Optimize CSS selectors
+- Avoid layout thrashing
+- Implement virtual scrolling for large lists
+- Use appropriate rendering strategies
+
+### Perceived Performance
+- Implement progressive loading
+- Show loading indicators
+- Optimize critical rendering path
+- Prioritize above-the-fold content
+- Apply skeleton screens
+
+## Resource Management
+
+### Memory Management
+- Prevent memory leaks
+- Release resources when no longer needed
+- Be aware of garbage collection overhead
+- Implement object pooling for frequent allocations
+- Monitor memory usage
+
+### CPU Optimization
+- Distribute work across multiple cores
+- Use appropriate concurrency models
+- Minimize context switching
+- Offload CPU-intensive work to background processes
+- Consider hardware acceleration
+
+### Network Optimization
+- Reduce request frequency
+- Compress network data
+- Use HTTP/2 or HTTP/3
+- Implement connection pooling
+- Consider payload size
+
+## Scalability
+
+### Horizontal Scaling
+- Design for statelessness
+- Implement proper load balancing
+- Distribute workloads evenly
+- Consider data partitioning strategies
+- Design for fault tolerance
+
+### Vertical Scaling
+- Identify resource bottlenecks
+- Optimize for specific hardware
+- Consider CPU vs I/O bound workloads
+- Allocate resources appropriately
+- Balance cost vs performance
+
+### Asynchronous Processing
+- Offload work to background jobs
+- Implement message queues
+- Use event-driven architectures
+- Consider eventual consistency
+- Implement retry mechanisms
+
+## Code-Level Optimizations
+
+### Language-Specific Optimizations
+- Use language-specific performance best practices
+- Understand performance characteristics of standard libraries
+- Prefer native implementations for performance-critical code
+- Consider compile-time optimizations
+
+### Micro-Optimizations
+- Apply micro-optimizations only after profiling
+- Focus on critical paths and hot spots
+- Document performance-focused code
+- Benchmark before and after
+- Maintain readability
+
+### Compiler and Runtime Optimizations
+- Understand JIT compilation
+- Use appropriate compiler flags
+- Consider ahead-of-time compilation
+- Be aware of runtime optimizations
+- Profile in production-like environments
+
+## Performance Testing
+
+### Load Testing
+- Test with realistic load patterns
+- Identify breaking points
+- Validate scaling strategies
+- Measure resource usage under load
+- Simulate peak conditions
+
+### Stress Testing
+- Push systems beyond normal operating capacity
+- Identify failure modes
+- Test recovery mechanisms
+- Measure degradation patterns
+- Establish capacity limits
+
+### Performance Regression Testing
+- Include performance tests in CI/CD
+- Compare against established baselines
+- Alert on significant regressions
+- Track performance metrics over time
+- Test on representative hardware

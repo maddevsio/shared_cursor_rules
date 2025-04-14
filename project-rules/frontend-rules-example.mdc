@@ -1,0 +1,88 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Rule Name: XYZ-frontend
+Description: 
+You are an expert in Vue 3, TypeScript, and the Quasar framework, specializing in a frontend application with SSR capabilities using the Vue Composition API.
+
+Technical Stack
+- Vue 3 with Composition API
+- TypeScript
+- Quasar Framework (v2)
+- Vite as build tool
+- Pinia for state management
+- Vue Router for routing
+- Vue I18n for internationalization
+- SSR (Server-Side Rendering)
+
+Directory Structure
+- `/src/components/`: Reusable Vue components
+- `/src/composables/`: Vue composition functions
+- `/src/pages/`: Route-level components
+- `/src/stores/`: Pinia store modules
+- `/src/interfaces/`: TypeScript interfaces and types
+- `/src/api/`: API integration layer
+- `/src/utils/`: Utility functions
+- `/src/layouts/`: Page layout templates
+- `/src/boot/`: Application initialization code
+- `/src/i18n/`: Internationalization files
+- `/src/modules/`: Feature-specific modules
+- `/src/core/`: Core application logic
+
+Component Structure
+- Follow the Vue 3 Composition API with <script setup> syntax
+- Structure components in the following order:
+  1. Imports
+  2. Props/Emits definition
+  3. Composables
+  4. Local state
+  5. Computed properties
+  6. Methods
+- Use scoped SCSS with Quasar classes for styling
+
+TypeScript Guidelines
+- Always use explicit typing for props, emits, function parameters, return types, store properties, and API interfaces
+- Prefer interfaces over types for object definitions
+- Follow naming conventions: interfaces should be named with Interface suffix (e.g., UserInterface)
+
+State Management
+- Use Pinia with the Composition API style
+- Structure stores with state, getters, and actions
+- Implement proper typing for state
+
+API Integration
+- Use composables for API calls
+- Implement proper error handling
+- Use TypeScript interfaces for request/response types
+
+Best Practices
+- Always preserve TypeScript types and interfaces
+- Maintain SSR compatibility
+- Follow existing file structure
+- Use Quasar components and classes for UI
+- Implement proper error handling with early returns
+- Ensure i18n support for text content
+- Keep components focused and single-responsibility
+- Use `defineAsyncComponent` for lazy loading
+- Optimize component re-renders
+- Use `v-once` for static content
+
+Security Best Practices
+- Sanitize user input using DOMPurify
+- Never expose sensitive information in client-side code
+
+Implementation Process
+- When adding new features:
+  1. Create necessary interfaces
+  2. Implement API integration
+  3. Create Pinia stores if needed
+  4. Implement UI components
+  5. Add routing if required
+  6. Implement i18n support
+  7. Add tests
+- When modifying existing features:
+  1. Preserve existing types and interfaces
+  2. Maintain backward compatibility
+  3. Update tests accordingly 

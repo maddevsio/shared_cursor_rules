@@ -1,0 +1,146 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Testing Strategy Guidelines
+
+## Test Pyramid
+
+### Unit Tests
+- Focus on testing individual components in isolation
+- Mock dependencies to maintain isolation
+- Aim for high coverage (80%+)
+- Fast execution (milliseconds)
+- Write many unit tests
+
+### Integration Tests
+- Test interactions between components
+- Use real dependencies when feasible
+- Focus on boundaries and interfaces
+- Medium execution speed
+- Write fewer than unit tests, but sufficient to cover key integrations
+
+### End-to-End Tests
+- Test complete user flows
+- Run against environments similar to production
+- Focus on critical user journeys
+- Slower execution (seconds to minutes)
+- Write few, targeted E2E tests
+
+## Test-Driven Development
+
+### Red-Green-Refactor Cycle
+- Write a failing test first (Red)
+- Implement the minimum code to pass the test (Green)
+- Improve the code without changing functionality (Refactor)
+- Repeat for next requirement
+
+### TDD Benefits
+- Ensures testable designs
+- Documents expected behavior
+- Prevents regressions
+- Leads to modular, loosely coupled code
+
+## Test Quality
+
+### Characteristics of Good Tests
+- Independent: Tests don't depend on each other
+- Repeatable: Same result every time
+- Specific: Tests one thing only
+- Readable: Clear test intent
+- Fast: Quick execution
+
+### Test Naming
+- Clearly describe what is being tested
+- Include expected behavior and test conditions
+- Follow consistent naming convention
+- Example: `should_returnUserProfile_whenValidIdProvided()`
+
+### Arrange-Act-Assert
+- Arrange: Set up the test scenario
+- Act: Execute the code being tested
+- Assert: Verify the expected outcome
+- Keep sections visually separated
+
+## Test Coverage
+
+### Code Coverage Metrics
+- Line coverage: Percentage of code lines executed
+- Branch coverage: Percentage of decision paths executed
+- Function coverage: Percentage of functions called
+- Use as a guideline, not a goal
+
+### What to Cover
+- Happy paths (normal operation)
+- Edge cases and boundary values
+- Error cases and exceptions
+- Race conditions in concurrent code
+- Security considerations
+
+## Testing Specific Components
+
+### API Testing
+- Test all available endpoints
+- Verify correct status codes
+- Validate response formats
+- Test authentication and authorization
+- Check rate limiting and quotas
+
+### UI Testing
+- Test rendering correctness
+- Verify user interactions
+- Check accessibility compliance
+- Test responsiveness
+- Validate performance metrics
+
+### Database Testing
+- Verify data integrity
+- Test migrations
+- Validate queries
+- Check performance
+- Test backup/restore procedures
+
+## Test Data Management
+
+### Test Data Strategy
+- Use factories or builders for test data
+- Avoid hardcoded test data
+- Clean up test data after tests
+- Use realistic but anonymized data
+- Seed databases consistently
+
+### Test Doubles
+- Use stubs for providing indirect inputs
+- Use mocks for verifying indirect outputs
+- Use fakes for replacing complex dependencies
+- Use spies for recording behavior
+- Use dummies for filling parameters
+
+## Test Organization
+
+### Test Structure
+- Mirror production code structure in test code
+- Group related tests together
+- Keep test files focused on specific components
+- Organize tests by feature or module
+
+### Shared Test Code
+- Create reusable test utilities
+- Implement custom test assertions
+- Share test fixtures and factories
+- Avoid duplicate test setup code
+
+## Test Maintenance
+
+### Dealing with Flaky Tests
+- Quarantine unreliable tests
+- Fix or delete flaky tests promptly
+- Identify and resolve timing issues
+- Avoid dependencies on external systems
+
+### Continuous Improvement
+- Refactor tests alongside production code
+- Review test effectiveness regularly
+- Track test metrics (execution time, coverage)
+- Update tests when requirements change
