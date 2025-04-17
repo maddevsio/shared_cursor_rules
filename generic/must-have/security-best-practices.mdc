@@ -13,12 +13,6 @@ alwaysApply: false
 - Implement strict input type checking
 - Use allowlists rather than blocklists
 
-### Input Sanitization
-- Sanitize user input before using it in queries
-- Remove or encode potentially dangerous characters
-- Use parameterized queries for databases
-- Apply context-appropriate escaping
-
 ### Content Security
 - Implement Content Security Policy (CSP)
 - Validate uploaded files (type, size, content)
@@ -30,7 +24,7 @@ alwaysApply: false
 ### Authentication Best Practices
 - Enforce strong password policies
 - Implement multi-factor authentication
-- Use secure password storage (salted hashing)
+- Use secure password storage (per user salted hashing)
 - Lock accounts after failed attempts
 - Implement secure password recovery
 
@@ -96,69 +90,9 @@ alwaysApply: false
 
 ## Secure Coding Practices
 
-### OWASP Top 10 Prevention
-- Prevent injection (SQL, NoSQL, OS command)
-- Avoid broken authentication
-- Protect sensitive data
-- Validate and sanitize XML
-- Implement proper access control
-
-### Code Review for Security
-- Conduct security-focused code reviews
-- Use static analysis security tools (SAST)
-- Implement peer review for security critical code
-- Verify security controls during review
-- Check for insecure uses of libraries
-
 ### Secure Dependencies
 - Use only necessary dependencies
 - Keep dependencies updated
 - Scan dependencies for vulnerabilities
 - Pin dependency versions
 - Have a process for security updates
-
-## Security Testing
-
-### Security Testing Methods
-- Implement security unit tests
-- Conduct regular penetration testing
-- Use dynamic application security testing (DAST)
-- Perform automated scanning
-- Test for common vulnerabilities
-
-### Common Test Cases
-- Authentication bypass attempts
-- Privilege escalation attacks
-- Input validation bypasses
-- Session handling weaknesses
-- File upload vulnerabilities
-
-### Security Regression Testing
-- Include security tests in CI/CD
-- Automatically scan new code for vulnerabilities
-- Verify fixed vulnerabilities don't return
-- Test security headers and configurations
-- Validate encryption implementations
-
-## Incident Response
-
-### Security Logging
-- Log security-relevant events
-- Include necessary context in logs
-- Protect logs from tampering
-- Implement centralized logging
-- Set appropriate log retention periods
-
-### Breach Detection
-- Monitor for suspicious activity
-- Set up alerts for security events
-- Implement intrusion detection
-- Monitor for data exfiltration
-- Check for unauthorized access
-
-### Incident Handling
-- Have a documented incident response plan
-- Define roles and responsibilities
-- Implement communication procedures
-- Document evidence collection methods
-- Practice incident response scenarios

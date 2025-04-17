@@ -7,15 +7,11 @@ alwaysApply: false
 
 ## Main Branches
 
-### main (or master)
+### main / master / production
 - Contains production-ready code
 - Never commit directly to main
-- Only accepts merges from:
-  - hotfix/* branches
-  - release/* branches
-- Must be tagged with version number after each merge
 
-### develop
+### develop / staging
 - Main development branch
 - Contains latest delivered development changes
 - Source branch for feature branches
@@ -27,19 +23,8 @@ alwaysApply: false
 - Branch from: develop
 - Merge back into: develop
 - Naming convention: feature/[issue-id]-descriptive-name
-- Example: feature/123-user-authentication
+- Example: feature/JIRA-123-user-authentication
 - Must be up-to-date with develop before creating PR
-- Delete after merge
-
-### release/*
-- Branch from: develop
-- Merge back into: 
-  - main
-  - develop
-- Naming convention: release/vX.Y.Z
-- Example: release/v1.2.0
-- Only bug fixes, documentation, and release-oriented tasks
-- No new features
 - Delete after merge
 
 ### hotfix/*
@@ -54,22 +39,22 @@ alwaysApply: false
 
 ## Commit Messages
 
-- Format: `type(scope): description`
+- Format: `issue-id - type(scope): description`
 - Types:
-  - feature: New feature
-  - fix: Bug fix
-  - docs: Documentation changes
-  - style: Formatting, missing semicolons, etc.
-  - refactor: Code refactoring
-  - test: Adding tests
-  - chore: Maintenance tasks
+  - JIRA-123 - feature: New feature
+  - JIRA-123 - fix: Bug fix
+  - JIRA-123 - docs: Documentation changes
+  - JIRA-123 - style: Formatting, missing semicolons, etc.
+  - JIRA-123 - refactor: Code refactoring
+  - JIRA-123 - test: Adding tests
+  - JIRA-123 - chore: Maintenance tasks
 
 ## Version Control
 
 ### Semantic Versioning
-- MAJOR version for incompatible API changes
-- MINOR version for backwards-compatible functionality
-- PATCH version for backwards-compatible bug fixes
+- MAJOR version for incompatible API changes (1.4 -> 2.0)
+- MINOR version for backwards-compatible functionality (1.4 -> 1.5)
+- PATCH version for backwards-compatible bug fixes (1.4 -> 1.4.1)
 
 ## Pull Request Rules
 
@@ -89,17 +74,6 @@ alwaysApply: false
 - Include administrators in restrictions
 - No force pushes
 - No deletions
-
-## Release Process
-
-1. Create release branch from develop
-2. Bump version numbers
-3. Fix any release-specific issues
-4. Create PR to main
-5. After merge to main:
-   - Tag release
-   - Merge back to develop
-   - Delete release branch
 
 ## Hotfix Process
 

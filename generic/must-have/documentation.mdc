@@ -17,33 +17,16 @@ alwaysApply: false
 - Store documentation with code in version control
 - Review documentation changes alongside code changes
 - Keep documentation up-to-date with every code change
-- Automate documentation generation where possible
 
 ### Audience Awareness
 - Write for the specific audience (users, developers, ops)
 - Consider the technical level of the audience
-- Address the needs and questions of each audience
-- Use appropriate terminology for the audience
-
-## Code Documentation
 
 ### Code Comments
 - Comment why, not what (code should be self-documenting)
 - Document non-obvious design decisions
 - Explain complex algorithms and business rules
 - Document temporary solutions and technical debt
-
-### Function/Method Documentation
-- Document parameters and return values
-- Describe side effects and exceptions
-- Include usage examples for complex functions
-- Document thread safety and performance considerations
-
-### Class/Module Documentation
-- Describe the purpose and responsibility
-- Document relationships with other components
-- Include usage examples
-- Document lifecycle (initialization, cleanup)
 
 ## API Documentation
 
@@ -108,19 +91,6 @@ alwaysApply: false
 ## Documentation Format and Structure
 
 ### Consistent Style
-- Use a consistent tone and voice
 - Follow a style guide for technical writing
-- Maintain consistent formatting and organization
+- Maintain consistent formatting
 - Use templates for common documentation types
-
-### Searchability
-- Use appropriate headings and sections
-- Include a table of contents for longer documents
-- Tag documentation with relevant keywords
-- Ensure documentation is indexed for search
-
-### Accessibility
-- Use alternative text for images
-- Ensure documentation is readable by screen readers
-- Maintain good color contrast
-- Provide documentation in multiple formats when needed
