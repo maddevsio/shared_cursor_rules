@@ -1,3 +1,5 @@
+[![Developed by Mad Devs](https://maddevs.io/badge-dark.svg)](https://maddevs.io?utm_source=github&utm_medium=shared_cursor_rules)
+
 # Шаблоны правил для Cursor
 
 Эти шаблоны основаны на [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
