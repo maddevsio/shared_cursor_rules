@@ -1,91 +1,91 @@
 [![Developed by Mad Devs](https://maddevs.io/badge-dark.svg)](https://maddevs.io?utm_source=github&utm_medium=shared_cursor_rules)
 
-# Шаблоны правил для Cursor
+# Cursor Rules Templates
 
-Эти шаблоны основаны на [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
+These templates are based on [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
 
-## Структура
+## Structure
 
-📁 **generic** - общие правила для любого стека
-  - 📁 **must-have** - обязательные правила для всех проектов компании
-  - 📁 **optional** - необязательные правила, используйте при необходимости
+📁 **generic** - general rules for any tech stack
+  - 📁 **must-have** - mandatory rules for all company projects
+  - 📁 **optional** - optional rules, use as needed
 
-📁 **specific** - примеры для конкретных стеков
+📁 **specific** - examples for specific tech stacks
 
-📁 **project-rules** - примеры правил для отдельных проектов
+📁 **project-rules** - examples of rules for individual projects
 
-📁 **user-rules** - примеры персональных правил (действуют на все ваши проекты)
-
----
-
-## Быстрый старт
-
-1. Скопируйте правила из `generic/must-have` и выборочно из `generic/optional` и `specific`
-2. Вставьте их в `.cursor/rules` вашего проекта
-3. Настройте правила под ваш проект:
-   - Правила из `generic/must-have` можно адаптировать, но важно сохранять их суть. Для нас важно, чтобы все проекты компании основывались на единых принципах.
-   - Правила из `generic/optional` и `specific` можно менять полностью
-4. Не стесняйтесь **просить ИИ адаптировать правила под ваш проект**
-5. Изучите `project-rules` и создайте кастомные правила для вашего проекта
-6. Посмотрите `user-rules` и создайте персональные правила (они добавляются в `Cursor settings → Rules → User rules`)
+📁 **user-rules** - examples of personal rules (apply to all your projects)
 
 ---
 
-## Примеры промптов для внедрения cursor правил
+## Quick start
 
-### Для ознакомления с правилами
-```
-Прочитай все правила в директории .cursor/rules и подтверди, что ты их понял. 
-Кратко перескажи суть каждого правила и как ты будешь их применять в работе. 
-Подтверди, что никогда не будешь игнорировать эти правила.
-```
+1. Copy rules from `generic/must-have` and selectively from `generic/optional` and `specific`
+2. Paste them into `.cursor/rules` of your project
+3. Customize the rules for your project:
+   - Rules from `generic/must-have` can be adapted, but it's important to preserve their essence. For us, it's crucial that all company projects are based on unified principles.
+   - Rules from `generic/optional` and `specific` can be completely changed
+4. Don't hesitate to **ask AI to adapt the rules for your project**
+5. Study `project-rules` and create custom rules for your project
+6. Check out `user-rules` and create personal rules (they are added to `Cursor settings → Rules → User rules`)
 
-### Для адаптации правил под проект
-```
-Изучи правила в .cursor/rules/{правило} и адаптируй их для проекта [описание вашего проекта]. 
-Учти, что мы используем [ваш стек], а команда состоит из [описание команды]. 
-Важно сохранить суть правил из must-have, но можно их улучшить.
-```
+---
 
-### Для создания кастомных правил проекта
+## Example prompts for implementing Cursor rules
+
+### For familiarizing with rules
 ```
-Создай правила для проекта с учетом следующих особенностей: 
-1. Технический стек: [ваш стек]
-2. Архитектура: [описание архитектуры]
-3. Основные проблемы, которые мы хотим решить: [проблемы]
-4. Наши главные ценности в коде: [ценности]
-5. Подход при выполнении задач: [алгоритм типичных действий]
+Read all rules in the `.cursor/rules` directory and confirm that you understand them.
+Briefly summarize the essence of each rule and how you will apply them in your work.
+Confirm that you will never ignore these rules.
 ```
 
-### Для создания персональных правил
+### For adapting rules to a project
 ```
-Помоги создать персональные правила для ИИ-агента с учетом моего стиля работы:
-1. Я предпочитаю [ваши предпочтения в программировании]
-2. Часто работаю с [технологии/библиотеки]
-3. Мне важно, чтобы код был [ваши приоритеты в коде]
-4. Обычно испытываю трудности с [проблемные области]
-5. Что никогда НЕ должен делать [запреты]
+Study the rules in `.cursor/rules/{rule}` and adapt them for the project [your project description].
+Consider that we use [your tech stack], and the team consists of [team description].
+It's important to preserve the essence of must-have rules, but they can be improved.
+```
+
+### For creating custom project rules
+```
+Create rules for the project considering the following features:
+1. Tech stack: [your stack]
+2. Architecture: [architecture description]
+3. Main problems we want to solve: [problems]
+4. Our core values in code: [values]
+5. Approach to task execution: [typical action algorithm]
+```
+
+### For creating personal rules
+```
+Help create personal rules for the AI agent considering my work style:
+1. I prefer [your programming preferences]
+2. Often work with [technologies/libraries]
+3. It's important for me that code is [your code priorities]
+4. Usually face difficulties with [problem areas]
+5. What should NEVER be done [prohibitions]
 ```
 
 ---
 
-## Настройка приоритетов
+## Setting priorities
 
-Чтобы изменить режим применения правила:
-1. Откройте файл правила 
-2. Нажмите на выпадающий список `Rule type`
-3. Выберите подходящий вариант
+To change the rule application mode:
+1. Open the rule file
+2. Click on the dropdown `Rule type`
+3. Select the appropriate option
 
-### Советы для эффективных правил:
+### Tips for effective rules:
 
-✅ Используйте небольшое количество правил  
-✅ Делайте короткие файлы (до 100 строк)  
-✅ Избегайте противоречий между правилами  
-✅ Ставьте `Rule type: Always` только для критически важных правил  
-✅ В начале чата попросите ИИ прочитать правила и пересказать их суть
+✅ Use a small number of rules  
+✅ Keep files short (up to 100 lines)  
+✅ Avoid contradictions between rules  
+✅ Set `Rule type: Always` only for critically important rules  
+✅ At the beginning of the chat, ask AI to read the rules and summarize their essence
 
 ---
 
-Если ИИ игнорирует правила, значит их слишком много или они неэффективно написаны. 
+If AI ignores the rules, it means there are too many of them or they are not effectively written.
 
-> **Нашли способ улучшить правила?** Сделайте PR, мы будем только рады ❤️
+> **Found a way to improve the rules?** Make a PR, we'll be happy ❤️
