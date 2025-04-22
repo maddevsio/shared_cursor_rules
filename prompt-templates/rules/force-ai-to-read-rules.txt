@@ -1,0 +1,3 @@
+Read all rules in the `.cursor/rules` directory and confirm that you understand them.
+Briefly summarize the essence of each rule and how you will apply them in your work.
+Confirm that you will never ignore these rules.

@@ -1,0 +1,3 @@
+Study the rules in `.cursor/rules/{rule}` and adapt them for the project [your project description].
+Consider that we use [your tech stack], and the team consists of [team description].
+It's important to preserve the essence of must-have rules, but they can be improved.

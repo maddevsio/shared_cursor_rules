@@ -1,0 +1,6 @@
+Help create personal rules for the AI agent considering my work style:
+1. I prefer [your programming preferences]
+2. Often work with [technologies/libraries]
+3. It's important for me that code is [your code priorities]
+4. Usually face difficulties with [problem areas]
+5. What should NEVER be done [prohibitions]

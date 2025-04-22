@@ -1,0 +1,15 @@
+create a list of all features that are available to users. 
+Separate the list by role: [admin role], [user role] and [guest role]
+
+Pages:
+- [page name] = [page description and route]
+- ...
+
+Navbar:
+- [navbar item name] = [navbar item description]
+- ...
+
+Non-interactive pages:
+- /tos
+- /about
+- ...

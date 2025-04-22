@@ -4,7 +4,8 @@
 
 These templates are based on [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
 
-## Structure
+## Rules structure 
+The `rules` directory contains ready-to-use cursor rules.
 
 📁 **generic** - general rules for any tech stack
   - 📁 **must-have** - mandatory rules for all company projects
@@ -16,9 +17,25 @@ These templates are based on [awesome-cursorrules](https://github.com/PatrickJS/
 
 📁 **user-rules** - examples of personal rules (apply to all your projects)
 
+## Using prompt templates
+
+The `prompt-templates` directory contains ready-to-use prompts
+
+- 📁 **rules** - prompts to help create, adapt, and work with rules
+- 📁 **documentation** - prompts to help generate documentation
+- 📁 **other**
+
+### How to use prompts:
+
+1. **Copy and paste**
+2. **Customize placeholders** like `[your tech stack]` with your specific information
+3. **Refine as needed**
+
+These prompts serve as starting points to help you get the most out of LLM
+
 ---
 
-## Quick start
+## Rules quick start
 
 1. Copy rules from `generic/must-have` and selectively from `generic/optional` and `specific`
 2. Paste them into `.cursor/rules` of your project
@@ -39,6 +56,7 @@ Read all rules in the `.cursor/rules` directory and confirm that you understand 
 Briefly summarize the essence of each rule and how you will apply them in your work.
 Confirm that you will never ignore these rules.
 ```
+[View Template](prompt-templates/rules/force-ai-to-read-rules.txt)
 
 ### For adapting rules to a project
 ```
@@ -46,6 +64,7 @@ Study the rules in `.cursor/rules/{rule}` and adapt them for the project [your p
 Consider that we use [your tech stack], and the team consists of [team description].
 It's important to preserve the essence of must-have rules, but they can be improved.
 ```
+[View Template](prompt-templates/rules/adjust-rules.txt)
 
 ### For creating custom project rules
 ```
@@ -56,6 +75,7 @@ Create rules for the project considering the following features:
 4. Our core values in code: [values]
 5. Approach to task execution: [typical action algorithm]
 ```
+[View Template](prompt-templates/rules/create-rules.txt)
 
 ### For creating personal rules
 ```
@@ -66,6 +86,25 @@ Help create personal rules for the AI agent considering my work style:
 4. Usually face difficulties with [problem areas]
 5. What should NEVER be done [prohibitions]
 ```
+[View Template](prompt-templates/rules/create-rules-personal.txt)
+
+### For writing comprehensive README files
+```
+Write a clear, concise README for this project that follows industry best practices and includes:
+
+1. Project title and brief description (1-2 sentences)
+2. Problem the project solves
+3. Key features (bullet points)
+4. Technologies/frameworks used
+5. Installation instructions with prerequisites and step-by-step setup
+6. Basic usage examples with code snippets
+7. Project structure overview (only key directories/files)
+8. Configuration options
+9. Contribution guidelines (if applicable)
+10. License information
+11. Credits/acknowledgments
+```
+[View Template](prompt-templates/documentation/write-readme.txt)
 
 ---
 

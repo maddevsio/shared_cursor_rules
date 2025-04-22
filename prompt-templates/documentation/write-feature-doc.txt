@@ -1,0 +1,20 @@
+Analyze the [feature]:
+- Describe what it does and its purpose in the product.
+- Explain how it is implemented, including relevant components and logic.
+- Highlight the differences between mobile and desktop implementations.
+- Investigate related composables to understand supporting logic.
+
+Then, write a **comprehensive internal document** that:
+- Starts with a **summary section** tailored for non-technical stakeholders (focus on user experience, goals, and business value).
+- Clearly explains the feature for engineers (include architecture, data flow, edge cases).
+
+Rules you should always follow:
+- Be detailed, well-structured, and use headings. 
+- Avoid numbering for headers. 
+- Avoid diagrams. 
+- Avoid code snippets. 
+- Reference the file names or function names. 
+- Don't reference file path, just file name is enough.
+- Wrap file names or function names with back ticks (`example.ts`)
+
+Create a new md file for this doc and suggest changes for review

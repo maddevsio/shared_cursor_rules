@@ -1,0 +1,6 @@
+Create rules for the project considering the following features:
+1. Tech stack: [your stack]
+2. Architecture: [architecture description]
+3. Main problems we want to solve: [problems]
+4. Our core values in code: [values]
+5. Approach to task execution: [typical action algorithm]
