@@ -3,7 +3,7 @@ Write a clear, concise README for this project that follows industry best practi
 1. Project title and brief description (1-2 sentences)
 2. Problem the project solves
 3. Key features (bullet points)
-4. Technologies/frameworks used
+4. Technologies/frameworks used. Engines version
 5. Installation instructions with prerequisites and step-by-step setup
 6. Basic usage examples with code snippets
 7. Project structure overview (only key directories/files)
