@@ -1,0 +1,5 @@
+Initialize and configure code linters for this project.
+- Detect the main languages and frameworks used.
+- Install and configure appropriate linters (e.g., ESLint for JavaScript/TypeScript, Flake8 or Ruff for Python, etc.).
+- Create or update configuration files (like .eslintrc, .flake8, pyproject.toml, etc.) with sensible defaults.
+- Add linting scripts to appropriate build tools if applicable.
