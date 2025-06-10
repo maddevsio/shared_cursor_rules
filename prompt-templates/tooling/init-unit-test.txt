@@ -1,0 +1,9 @@
+Initialize unit testing for this project.
+- Detect the primary programming language and frameworks used.
+- Choose and install an appropriate testing framework (e.g., pytest for Python, Jest for JavaScript/TypeScript, JUnit for Java, etc.).
+- Set up the necessary configuration files (e.g., pytest.ini, jest.config.js, etc.).
+- Create a tests or __tests__ directory with example test files for existing modules.
+- Add a test script to the project configuration (package.json, pyproject.toml, or similar).
+- Run the initial test suite and output the results.
+- Report test coverage (if applicable) and suggest improvements.
+- Ensure tests can be run via CLI or integrated with CI.
